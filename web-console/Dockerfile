@@ -7,7 +7,7 @@ ENV consoleBackstageHost http://scene_init:8080
 
 RUN rm -rf /usr/local/tomcat/webapps/ROOT/*
 
-COPY consolenode/target/web-console $WORKDIR
+COPY web-console/target/web-console $WORKDIR
 RUN sed -i "2i /usr/local/tomcat/webapps/ROOT/initDemo.sh" /usr/local/tomcat/bin/catalina.sh
 RUN chmod 777 /usr/local/tomcat/webapps/ROOT/initDemo.sh
 CMD ["catalina.sh", "run"]
