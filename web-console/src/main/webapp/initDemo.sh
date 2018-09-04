@@ -9,3 +9,7 @@ consoleBackstageHost=${consoleBackstageHost//\//\\\/}
 consoleBackstageHost=${consoleBackstageHost//&/\\&}
 consoleBackstageConfigPath=/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/config/consolebackstage.properties
 sed -i 's/\(consoleBackstageHost=\).*/\1'$consoleBackstageHost'/' $consoleBackstageConfigPath
+
+# Picture path config
+goodsPictureConfigPath=/usr/local/tomcat/webapps/ROOT/WEB-INF/classes/config/application.properties
+sed -i 's/\(goodsPictureCommonPath=\).*/\1'$picturePath'/' $goodsPictureConfigPath

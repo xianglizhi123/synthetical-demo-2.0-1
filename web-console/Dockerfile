@@ -5,6 +5,8 @@ ENV managerServicesUrl http://product_manager:8080
 
 ENV consoleBackstageHost http://scene_init:8080
 
+ENV picturePath /opt/picture
+
 RUN rm -rf /usr/local/tomcat/webapps/ROOT/*
 
 COPY web-console/target/web-console $WORKDIR
